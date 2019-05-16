@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Salt Language</title>
+	
+	<!-- task cssFiles (bootstrap css) -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lity.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+
+	<!-- custom css -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- font awesome -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+	<!-- viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+	
+</head>
+<body>
+
+<!-- menu start -->
+
+<div class="stickyTopMenu">
+
+	<div class="antiflex">
+		<div id="menu__btn" class="stickyTopMenu__settings">
+			<i class="fa fa-bars"></i>
+		</div>
+
+		<div class="stickyTopMenu__logo">
+			<h5>Salt Translater</h5>
+		</div>
+	</div>
+
+</div>
+
+<!-- //////////////// -->
+
+<div id="menu">
+
+	<div id="closeBtn">
+		<i class="fa fa-times"></i>
+	</div>
+
+	<div class="menu__logo">
+		<img src="https://image.flaticon.com/icons/svg/1368/1368679.svg" alt="logo">
+	</div>
+
+	<div class="menu__items">
+
+		<div class="menu__items__themeChanger">
+			<input id="themeChanger" type="checkbox" class="switch">
+			<h6 id="dronJokeHide">Включи это, если ты реально задр, и тебя слепит любая хуйня, что светит тебе в ебало</h6>
+			<h6 id="dronJokeShow">Ну привет Дрон :)</h6>
+		</div>
+
+		<div class="menu__items__themeChanger">
+			<audio id="dachaMusic" src="audio/dachaMusic.mp3"></audio>
+			<input id="dachaModeTheme" type="checkbox" class="switch">
+			<h6 id="dachaModeOff">Dacha mode off</h6>
+			<h6 id="dachaModeOn">Dacha mode on</h6>
+		</div>
+
+		<div class="menu__items__brick">
+			<img src="https://image.flaticon.com/icons/svg/138/138498.svg" alt="brick">
+			<h6>Возможно появится поддержка кирпичного языка</h6>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- menu end -->
+
+
+
+
+<!-- salt start -->
+<section class="salt">
+
+	<!-- faces start -->
+
+	<img class="faces" src="img/sonya.png" id="baran" alt="baran">
+	<img class="faces" src="img/strada.png" id="strada" alt="strada">
+	<img class="faces" src="img/psheno.png" id="psheno" alt="psheno">
+	<img class="faces" src="img/kuch.png" id="kuch" alt="kuch">
+	<img class="faces" src="img/emil.png" id="emil" alt="emil">
+	<img class="faces" src="img/bjn.png" id="bjn" alt="bjn">
+	<img class="faces" src="img/alman.png" id="alman" alt="alman">
+
+	<!-- faces end -->
+
+	<div class="container">
+		<div class="row d-flex justify-content-center align-items-center">
+
+			<div class="col-lg-5">
+				<div class="salt__textWrapper">
+					<textarea placeholder="Писать здесь (для особо несуразных)" class="textareaDark" id="textIn"></textarea>
+				</div>
+			</div>
+
+			<div class="col-lg-2">
+				<div class="row">
+
+					<div class="col-lg-12">
+						<div class="salt__btnWrapper">
+							<audio id="yau" src="audio/yau.mp3"></audio>
+							<button id="btn">
+					      <img src="https://image.flaticon.com/icons/svg/1357/1357284.svg" alt="salt it">
+								<!-- <img src="https://image.flaticon.com/icons/svg/1670/1670629.svg" alt="translate"> -->
+							</button>
+						</div>
+					</div>
+
+					<div class="col-6 col-lg-6">
+						<div class="salt__btnWrapper">
+							<button id="btn__remove"><i class="fa fa-trash-o"></i></button>
+						</div>
+					</div>
+
+					<div class="col-6 col-lg-6">
+						<div class="salt__btnWrapper">
+							
+							<button class="copyText"
+							  data-clipboard-target=".cb-target-1"
+								id="btn__copy"><i class="fa fa-clone"></i>
+							</button>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-lg-5">
+				<div class="salt__textWrapper">
+					<textarea id="translateOuter" placeholder="Перевод появится здесь" class="textareaDark cb-target-1 textareaClass"></textarea>
+					<!-- <p class="copyText" data-clipboard-target=".cb-target-1">testtesttest</p> -->
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</section>
+<!-- salt end -->
+
+
+<footer>
+	<p>Created by</p>
+	<a href="https://vk.com/lyskovskiy1" target="_blank">Ilya Lyskov</a>
+	<p>&copy; 2019 All rights reserved</p>
+</footer>
+
+
+
+
+	<!-- task jsFiles -->
+	<script src="js/libs.min.js"></script>
+
+	<!-- clipboard js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+	<!-- custom css -->
+	<script src="js/common.js"></script>
+	
+
+	<!-- wow js -->
+	<script>
+		new WOW().init();
+	</script>
+
+</body>
+</html>
