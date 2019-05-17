@@ -26,12 +26,23 @@ btn.onclick = translate;
 
 function translate() {
 
+	let urLang = doc.getElementById('urLang');
+	let languageChange = doc.getElementById('languageChange');
+	let word;
+
+	if (urLang.value == '') {
+		 word = languageChange.value; 
+	} 
+
+	else {
+		word = urLang.value;
+	}
 
 	let text = doc.getElementById('textIn').value;
-	newText = text.replace(/[ауоыиэяюёеAEIOU]/ig, (function (salt) {return salt + 'с' + salt;}) );
+	newText = text.replace(/[ауоыиэяюёеAEIOU]/ig, (function (salt) {return salt + `${word}` + salt;}) );
 	translateOuter.value = newText;
 
-	if (text == 'честь ебаная' || text == 'Честь ебаная' ) {
+	if (text == 'честь ебаная' || text == 'Честь ебаная' || text == 'Честь ебаная ' || text == 'честь ебаная ' ) {
 		let fight = doc.getElementById('fight');
 		fight.play();
 	}
@@ -41,6 +52,11 @@ function translate() {
 		yau.play();
 	}
 	
+	if (translateOuter.value == 'этэмитилитиятя' && text == 'эмилия') {
+		$('.emil').css('display', 'block');
+		let scary = doc.getElementById('scary');
+		scary.play();
+	}
 
 }
 
@@ -51,6 +67,14 @@ function del() {
 	doc.getElementById('textIn').value = '';
 	doc.getElementById('translateOuter').value = '';
 
+}
+
+let delUrLang = doc.getElementById('delUrLang');
+delUrLang.onclick = delLang; 
+
+function delLang() {
+	let urLang = doc.getElementById('urLang');
+	urLang.value = '';
 }
 
 
