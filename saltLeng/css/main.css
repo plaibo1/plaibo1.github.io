@@ -201,6 +201,37 @@ input[type="checkbox"].switch:checked:after {
     -webkit-transform: translate(-50%, 40%);
             transform: translate(-50%, 40%); } }
 
+#languageChange {
+  width: 100%;
+  border: 2px solid #7874F7;
+  height: 40px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  padding: 0 5px;
+  color: #7874F7;
+  font-weight: bold;
+  outline: none;
+  background: #fff !important; }
+  #languageChange option {
+    color: #7874F7; }
+
+.emil {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background: url("../img/dura.jpg");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  color: #7874F7;
+  font-weight: bold;
+  display: none; }
+  .emil span {
+    position: absolute;
+    display: block;
+    bottom: 0; }
+
 #menu {
   width: 290px;
   height: 100vh;
@@ -250,7 +281,7 @@ input[type="checkbox"].switch:checked:after {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 30px; }
+    margin: 10px 0; }
     .menu__items__themeChanger h6 {
       display: block;
       width: 70%;
@@ -272,6 +303,53 @@ input[type="checkbox"].switch:checked:after {
       display: block;
       width: 70%;
       margin-left: auto; }
+
+.arrDown {
+  width: 100%;
+  text-align: center;
+  color: #7874F7; }
+
+#urLang {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  border: 2px solid #7874F7;
+  padding: 0 5px;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  color: #7874F7;
+  outline: none; }
+
+#delUrLang {
+  min-width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #7874F7;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  margin-left: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  #delUrLang:hover {
+    background: #ff5441; }
 
 .antiflex {
   display: -webkit-box;
