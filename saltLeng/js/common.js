@@ -26,12 +26,20 @@ btn.onclick = translate;
 
 function translate() {
 
-	let yau = doc.getElementById('yau');
-	yau.play();
 
 	let text = doc.getElementById('textIn').value;
 	newText = text.replace(/[ауоыиэяюёеAEIOU]/ig, (function (salt) {return salt + 'с' + salt;}) );
 	translateOuter.value = newText;
+
+	if (text == 'честь ебаная' || text == 'Честь ебаная' ) {
+		let fight = doc.getElementById('fight');
+		fight.play();
+	}
+
+	else {
+		let yau = doc.getElementById('yau');
+		yau.play();
+	}
 	
 
 }
