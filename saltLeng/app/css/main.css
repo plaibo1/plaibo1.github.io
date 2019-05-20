@@ -590,15 +590,13 @@ footer {
     margin: 0 5px; }
 
 @media (max-width: 991px) {
+  footer {
+    position: relative;
+    font-size: 14px; }
   .rowMargin {
     margin-bottom: 50px; }
   .cntntImgNone {
-    display: none !important; }
-    .cntntImgNone .salt {
-      padding: 50px 0; }
-    .cntntImgNone footer {
-      position: relative;
-      font-size: 14px; } }
+    display: none !important; } }
 
 @media (max-width: 375px) {
   .rowMargin {
@@ -606,4 +604,6 @@ footer {
     .rowMargin .dachaMode {
       -webkit-background-size: cover;
       background-size: cover;
-      background-repeat: no-repeat; } }
+      background-repeat: no-repeat; }
+  .cntnt__box__text h1 {
+    font-size: 30px; } }
