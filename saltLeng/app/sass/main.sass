@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500")
+
+@import url("https://fonts.googleapis.com/css?family=Muli")
+
+body
+  -webkit-transition: all 0.3s ease
+  -o-transition: all 0.3s ease
+  transition: all 0.3s ease
+
+h1, h2, h3, h4, h5
+  font-family: 'Quicksand', sans-serif
+  margin: 0
+  padding: 0
+
+p, h6
+  font-family: 'Muli', sans-serif
+  margin: 0
+  padding: 0
+
+ul
+  padding: 0
+  margin: 0
+  list-style: none
+
+.darkMode
+  background: #181818
+
+.darkModeGrey
+  background: #252424 !important
+  color: #f5f5f5 !important
+
+input[type="checkbox"].switch
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  width: 3.5em
+  height: 1.5em
+  background: #ddd
+  -webkit-border-radius: 3em
+  border-radius: 3em
+  position: relative
+  cursor: pointer
+  outline: none
+  -webkit-transition: all .2s ease-in-out
+  -o-transition: all .2s ease-in-out
+  transition: all .2s ease-in-out
+  &:checked
+    background: #7874F7
+  &:after
+    position: absolute
+    content: ""
+    width: 1.5em
+    height: 1.5em
+    -webkit-border-radius: 50%
+    border-radius: 50%
+    background: #fff
+    -webkit-box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3)
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3)
+    -webkit-transform: scale(0.7)
+    -ms-transform: scale(0.7)
+    transform: scale(0.7)
+    left: 0
+    -webkit-transition: all .2s ease-in-out
+    -o-transition: all .2s ease-in-out
+    transition: all .2s ease-in-out
+  &:checked:after
+    left: -webkit-calc(100% - 1.5em)
+    left: calc(100% - 1.5em)
+
+#dronJokeShow
+  display: none
+
+.dachaMode
+  background: url("https://pp.userapi.com/c846019/v846019781/1fac5a/Pcbrs6qSm1w.jpg")
+  -webkit-animation: bounceBg infinite ease-in-out 5s
+  animation: bounceBg infinite ease-in-out 5s
+
+#dachaModeOn
+  display: none
+  line-height: 75px
+
+#dachaModeOff
+  line-height: 75px
+
+.colorBlindTextarea
+  -webkit-animation: colorBlind infinite ease-in-out 0.3s
+  animation: colorBlind infinite ease-in-out 0.3s
+  opacity: 0.5
+
+@-webkit-keyframes colorBlind
+  0%
+    background: #ff5441
+
+  50%
+    background: #da00ff
+
+  100%
+    background: #7874F7
+
+
+@keyframes colorBlind
+  0%
+    background: #ff5441
+
+  50%
+    background: #da00ff
+
+  100%
+    background: #7874F7
+
+
+@-webkit-keyframes bounceBg
+  0%
+    -webkit-background-size: 10% 10%
+    background-size: 10%
+
+  50%
+    -webkit-background-size: 100% 100%
+    background-size: 100%
+
+  100%
+    -webkit-background-size: 10% 10%
+    background-size: 10%
+
+
+@keyframes bounceBg
+  0%
+    -webkit-background-size: 10% 10%
+    background-size: 10%
+
+  50%
+    -webkit-background-size: 100% 100%
+    background-size: 100%
+
+  100%
+    -webkit-background-size: 10% 10%
+    background-size: 10%
+
+
+.faces
+  position: fixed
+  z-index: 99
+  display: none
+  -webkit-animation: danceFace 0.3s infinite ease
+  animation: danceFace 0.3s infinite ease
+
+#baran
+  right: -25px
+  top: 0
+
+#strada
+  top: 5%
+  left: 0
+
+#psheno
+  left: 0
+  top: 35%
+
+#kuch
+  right: 0
+  top: 35%
+
+#emil
+  right: 0
+  top: 70%
+
+#bjn
+  left: 0
+  top: 70%
+
+@-webkit-keyframes danceFace
+  0%
+    width: 120px
+
+  50%
+    width: 140px
+
+  100%
+    width: 120px
+
+
+@keyframes danceFace
+  0%
+    width: 120px
+
+  50%
+    width: 140px
+
+  100%
+    width: 120px
+
+
+#alman
+  bottom: -50px
+  left: 50%
+  -webkit-animation: almanFinger 3s infinite ease !important
+  animation: almanFinger 3s infinite ease !important
+
+@-webkit-keyframes almanFinger
+  0%
+    -webkit-transform: translate(-50%, 40%)
+    transform: translate(-50%, 40%)
+
+  50%
+    -webkit-transform: translate(-50%, -25%)
+    transform: translate(-50%, -25%)
+
+  100%
+    -webkit-transform: translate(-50%, 40%)
+    transform: translate(-50%, 40%)
+
+
+@keyframes almanFinger
+  0%
+    -webkit-transform: translate(-50%, 40%)
+    transform: translate(-50%, 40%)
+
+  50%
+    -webkit-transform: translate(-50%, -25%)
+    transform: translate(-50%, -25%)
+
+  100%
+    -webkit-transform: translate(-50%, 40%)
+    transform: translate(-50%, 40%)
+
+
+#languageChange
+  width: 100%
+  border: 2px solid #7874F7
+  height: 40px
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  padding: 0 5px
+  color: #7874F7
+  font-weight: bold
+  outline: none
+  background: #fff !important
+  option
+    color: #7874F7
+
+.emil
+  width: 100%
+  height: 100%
+  position: fixed
+  z-index: 999
+  background: url("../img/dura.jpg")
+  -webkit-background-size: cover
+  background-size: cover
+  background-repeat: no-repeat
+  color: #7874F7
+  font-weight: bold
+  display: none
+  span
+    position: absolute
+    display: block
+    bottom: 0
+
+#menu
+  width: 290px
+  height: 100vh
+  background: #f0f1ff
+  position: fixed
+  left: -290px
+  z-index: 999
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15)
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15)
+  -webkit-transition: all 0.3s ease
+  -o-transition: all 0.3s ease
+  transition: all 0.3s ease
+
+.menu__logo
+  width: 65px
+  margin: 0 auto
+  position: relative
+  img
+    width: 100%
+    margin-top: 20px
+    margin-bottom: 35px
+
+#closeBtn
+  position: absolute
+  right: 15px
+  top: 15px
+  font-size: 25px
+  color: #7874F7
+  cursor: pointer
+  -webkit-transition: all 0.3s ease
+  -o-transition: all 0.3s ease
+  transition: all 0.3s ease
+  &:hover
+    -webkit-transform: rotate(-360deg)
+    -ms-transform: rotate(-360deg)
+    transform: rotate(-360deg)
+    color: #ff5441
+
+.menu__items
+  margin: 0 10px
+
+.menu__items__themeChanger
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  margin: 10px 0
+  h6
+    display: block
+    width: 70%
+    height: 76px
+    margin-left: auto
+
+.menu__items__brick
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  margin-bottom: 30px
+  img
+    width: 75px
+  h6
+    display: block
+    width: 70%
+    margin-left: auto
+
+.arrDown
+  width: 100%
+  text-align: center
+  color: #7874F7
+
+#urLang
+  width: 100%
+  height: 40px
+  line-height: 40px
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  border: 2px solid #7874F7
+  padding: 0 5px
+  font-weight: bold
+  font-family: 'Quicksand', sans-serif
+  color: #7874F7
+  outline: none
+
+#delUrLang
+  min-width: 40px
+  height: 40px
+  border: none
+  outline: none
+  background: #7874F7
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  margin-left: 5px
+  color: #ffffff
+  cursor: pointer
+  -webkit-transition: all 0.5s ease
+  -o-transition: all 0.5s ease
+  transition: all 0.5s ease
+  &:hover
+    background: #ff5441
+
+.antiflex
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+
+.stickyTopMenu
+  width: 100%
+  position: fixed
+  z-index: 10
+  padding: 5px 10px
+  background: #ffffff
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -webkit-justify-content: space-between
+  -ms-flex-pack: justify
+  justify-content: space-between
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05)
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05)
+
+.stickyTopMenu__settings
+  background: #7874F7
+  display: -webkit-inline-box
+  display: -webkit-inline-flex
+  display: -ms-inline-flexbox
+  display: inline-flex
+  -webkit-box-pack: center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  color: #ffffff
+  width: 35px
+  height: 35px
+  -webkit-border-radius: 5px
+  border-radius: 5px
+  font-size: 22px
+  cursor: pointer
+  -webkit-transition: all 0.3s ease
+  -o-transition: all 0.3s ease
+  transition: all 0.3s ease
+  &:hover
+    background: #5a55f3
+
+.stickyTopMenu__logo
+  margin-left: 15px
+
+.salt
+  padding: 100px 0
+
+.salt__textWrapper
+  width: 100%
+  position: relative
+  textarea
+    width: 100%
+    height: 200px
+    background: #ffffff
+    border: none
+    resize: none
+    outline: none
+    -webkit-border-radius: 10px
+    border-radius: 10px
+    padding: 15px
+    font-size: 18px
+    font-family: 'Muli', sans-serif
+    font-weight: bold
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+    -webkit-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
+    -webkit-appearance: none
+    &:focus
+      -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15)
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15)
+
+.salt__btnWrapper
+  margin: 10px 0
+  button
+    width: 100%
+    background: #7874F7
+    border: none
+    outline: none
+    padding: 8px 0
+    font-size: 18px
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    color: #ffffff
+    cursor: pointer
+    -webkit-transition: all 0.5s ease
+    -o-transition: all 0.5s ease
+    transition: all 0.5s ease
+    &:hover
+      -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3)
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3)
+    i
+      -webkit-transition: all 0.5s ease
+      -o-transition: all 0.5s ease
+      transition: all 0.5s ease
+    &:hover i
+      -webkit-transform: rotateY(360deg)
+      transform: rotateY(360deg)
+    img
+      width: 50px
+      -webkit-transition: all 0.5s ease
+      -o-transition: all 0.5s ease
+      transition: all 0.5s ease
+    &:hover img
+      -webkit-transform: rotateY(360deg)
+      transform: rotateY(360deg)
+
+#btn:hover
+  background: #5a55f3
+
+#btn__remove
+  background: #ff5441
+  &:hover
+    background: #f82912
+
+#btn__copy
+  background: #ffb33e
+  &:hover
+    background: #ff9a03
+
+footer
+  width: 100%
+  position: absolute
+  bottom: 0
+  padding: 10px 0
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
+  border-top: 1px solid #d1d1d1
+  a
+    margin: 0 5px
+
+@media (max-width: 991px)
+  .salt
+    padding: 50px 0
+  footer
+    position: relative
+    font-size: 14px
+
+@media (max-width: 375px)
+  .dachaMode
+    -webkit-background-size: cover
+    background-size: cover
+    background-repeat: no-repeat
+		
