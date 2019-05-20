@@ -5,12 +5,24 @@ let openBtn = doc.getElementById('menu__btn');
 let closeBtn = doc.getElementById('closeBtn');
 let menu = doc.getElementById('menu');
 
+let menu__instruction = doc.getElementById('menu__instruction');
+let contentCloseBtn = doc.getElementById('contentCloseBtn');
+let content = doc.getElementById('content');
+
 openBtn.onclick = function() {
 	menu.style.left = '0';
 }
 
 closeBtn.onclick = function() {
 	menu.style.left = '-290px';
+}
+
+menu__instruction.onclick = function() {
+	content.style.right = '0';
+}
+
+contentCloseBtn.onclick = function() {
+	content.style.right = '-100%';
 }
 // menu end
 
