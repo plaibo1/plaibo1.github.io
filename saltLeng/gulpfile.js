@@ -24,7 +24,6 @@ gulp.task('sass', function(){
 gulp.task('jsFiles', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'app/libs/bootstrap/dist/js/bootstrap.min.js',
 		'app/libs/lityPopup/lity.js',
 		'app/libs/wowAndAnimatejs/wow.js',
@@ -122,7 +121,10 @@ gulp.task('build', function() {
 	var buildHtml = gulp.src('app/*.html')
 	.pipe(gulp.dest('dist'));
 
-	return buildCss, buildFonts, buildJs, buildHtml;
+	var buildAudio = gulp.src('app/audio/**/*')
+	.pipe(gulp.dest('dist/audio'))
+
+	return buildCss, buildFonts, buildJs, buildHtml, buildAudio;
 
 });
 
