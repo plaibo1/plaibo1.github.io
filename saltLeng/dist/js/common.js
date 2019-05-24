@@ -59,6 +59,18 @@ function translate() {
 		fight.play();
 	}
 
+	else if (text == 'dachamode' || text == 'Dachamode' || text == 'dachaMode' || text == 'Dacha mode' || text == 'Dacha Mode' || text == 'Дача модик') {
+		menu.style.left = '0';
+		let dachaActivation = doc.getElementById('dachaActivation');
+		dachaActivation.style.display = 'flex';
+	}
+
+	else if (text == 'dachamodeoff' || text == 'DachamodeOff' || text == 'dachaModeOff' || text == 'Dacha mode off' || text == 'Dacha Mode Off' || text == 'Дача модик офик') {
+		let dachaActivation = doc.getElementById('dachaActivation');
+		dachaActivation.style.display = 'none';
+		menu.style.left = '-290px';
+	}
+
 	else {
 		let yau = doc.getElementById('yau');
 		yau.play();
@@ -160,3 +172,6 @@ $(document).ready(function() {
 	});
 
 });
+
+
+// testing 

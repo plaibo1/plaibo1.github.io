@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -83,11 +84,11 @@
 
 			<div class="menu__items__themeChanger">
 				<input id="themeChanger" type="checkbox" class="switch">
-				<h6 id="dronJokeHide">Включи это, если ты реально задр, и тебя слепит любая хуйня, что светит тебе в ебало</h6>
-				<h6 id="dronJokeShow">Ну привет Дрон :)</h6>
+				<h6 id="dronJokeHide">Dark Mode off</h6>
+				<h6 id="dronJokeShow">Dark Mode on</h6>
 			</div>
 
-			<div class="menu__items__themeChanger">
+			<div class="menu__items__themeChanger" id="dachaActivation">
 				<audio id="dachaMusic" src="audio/dachaMusic.mp3"></audio>
 				<input id="dachaModeTheme" type="checkbox" class="switch">
 				<h6 id="dachaModeOff">Dacha mode off</h6>
@@ -128,7 +129,6 @@
 	</div>
 
 	<!-- menu end -->
-
 
 
 	<div id="content" class='cntnt'>
@@ -234,12 +234,44 @@
 			</div>
 			<!-- end -->
 
+
+			<!-- start -->
+			<div class="row d-flex">
+				<div class="col-lg-12">
+					<div class="cntnt__heading">
+						<h1>Теперь <span class="pMark">попробуйте</span> вы</h1>
+					</div>
+				</div>
+			</div>
+			<!-- end -->
+
+			<!-- start -->
+			<div class="row rowMargin d-flex justify-content-center">
+				<div class="col-12 col-lg-8">
+					
+					<div class="testing">
+						
+						<div class="testing__text" id="testResult">
+							<h3>Переведите слово: <span class="mRed"> "переводчик"</span></h3>
+						</div>
+
+						<div class="testing__input">
+							<input type="text" id="testWord">
+							<button id="testBtn">Go</button>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<!-- end -->
+
+
+
+
 		</div>
 
 	</div>
-
-
-
 
 
 	<div class="emil">
@@ -248,6 +280,7 @@
 			<h2>Пожалуйста, перезагрузите страницу</h2>
 		</span>
 	</div>
+
 
 	<!-- salt start -->
 	<section class="salt">
@@ -269,7 +302,7 @@
 
 				<div class="col-lg-5">
 					<div class="salt__textWrapper">
-						<textarea placeholder="Писать здесь (для особо несуразных)" class="textareaDark" id="textIn"></textarea>
+						<textarea placeholder="Писать здесь" class="textareaDark" id="textIn"></textarea>
 					</div>
 				</div>
 
