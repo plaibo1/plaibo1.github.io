@@ -498,35 +498,6 @@ input[type="checkbox"].switch {
 .rowMargin {
   margin-bottom: 100px; }
 
-.testing {
-  width: 100%;
-  padding: 20px;
-  background: #7874F7;
-  color: #ffffff;
-  text-align: center;
-  -webkit-border-radius: 15px;
-          border-radius: 15px; }
-  .testing h3 {
-    font-weight: bold;
-    margin-bottom: 15px; }
-  .testing input {
-    width: 200px;
-    padding: 10px;
-    border: none;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    -webkit-border-radius: 10px;
-            border-radius: 10px;
-    margin: 0 auto; }
-  .testing button {
-    cursor: pointer;
-    width: 45px;
-    height: 45px;
-    background: #00e587;
-    border: none;
-    outline: none; }
-
 .salt {
   padding: 100px 0; }
 
@@ -603,6 +574,35 @@ input[type="checkbox"].switch {
   background: #ffb33e; }
   #btn__copy:hover {
     background: #ff9a03; }
+
+.salt__textWrapper button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .salt__textWrapper button:hover {
+    background: #f1f1f1; }
+  .salt__textWrapper button i {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #7874F7;
+    font-size: 22px;
+    margin: auto; }
 
 footer {
   width: 100%;

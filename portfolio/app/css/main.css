@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+p {
+  font-weight: normal;
+  font-size: 18px; }
+
+.circle-green {
+  background: -webkit-gradient(linear, left top, right top, from(#78ffc2), to(#25ff54));
+  background: -webkit-linear-gradient(left, #78ffc2 0%, #25ff54 100%);
+  background: -o-linear-gradient(left, #78ffc2 0%, #25ff54 100%);
+  background: linear-gradient(90deg, #78ffc2 0%, #25ff54 100%); }
+
+.circle-purple {
+  background: -webkit-gradient(linear, left top, right top, from(#ae3be3), to(#4747fe));
+  background: -webkit-linear-gradient(left, #ae3be3 0%, #4747fe 100%);
+  background: -o-linear-gradient(left, #ae3be3 0%, #4747fe 100%);
+  background: linear-gradient(90deg, #ae3be3 0%, #4747fe 100%); }
+
+.circle-75 {
+  width: 75px;
+  height: 75px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute; }
+
+.circle-150 {
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute; }
+
+.circle-200 {
+  width: 200px;
+  height: 200px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute; }
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .header__welcomeText {
+    padding: 50px 0; }
+    .header__welcomeText h5 {
+      color: #6143f7;
+      margin: 0; }
+  .header__figures {
+    width: 100%;
+    height: 500px;
+    position: relative; }
+
+#header__figure__1 {
+  left: 20%;
+  bottom: 20%; }
+
+#header__figure__2 {
+  right: 20%;
+  top: 20%; }
+
+.meetMe {
+  padding: 50px 0;
+  margin: 50px 0; }

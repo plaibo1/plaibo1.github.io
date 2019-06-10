@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+
+	<title>Video player</title>
+
+
+
+	<!-- task cssFiles (bootstrap css) -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lity.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+
+	<!-- custom css -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- font awesome -->
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+	<!-- viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+
+
+	<div class="videoContainer">
+
+		<video id="tonyVideo" src="video/tonyMontana.mp4"></video>
+
+		<div class="videoContainer__progressBar">
+			<progress max="100" value="0" style="width: 500px;" id="videoProgressBar"></progress>
+		</div>
+
+		<div class="videoContainer__tools">
+			<button id="playVideoBtn">play</button>
+			<button id="pauseVideoBtn">pause</button>
+			<button id="stopVideoBtn">Stop</button>
+			<input type='range' min="0" max="100" value="100" id="videoVolumeRanger">
+		</div>
+
+	</div>
+
+
+	<!-- task jsFiles -->
+	<script src="js/libs.min.js"></script>
+
+	<!-- clipboard js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+	<!-- custom css -->
+	<script src="js/common.js"></script>
+
+</body>
+
+</html>

@@ -63,6 +63,10 @@ function translate() {
 		menu.style.left = '0';
 		let dachaActivation = doc.getElementById('dachaActivation');
 		dachaActivation.style.display = 'flex';
+
+		let dachaActivationSound = new Audio;
+		dachaActivationSound.src = 'audio/activation.mp3';
+		dachaActivationSound.play();
 	}
 
 	else if (text == 'dachamodeoff' || text == 'DachamodeOff' || text == 'dachaModeOff' || text == 'Dacha mode off' || text == 'Dacha Mode Off' || text == 'Дача модик офик') {
@@ -84,6 +88,48 @@ function translate() {
 
 }
 
+
+// speech 
+const speechRecordBtn = doc.getElementById('speechRecordBtn');
+const speechOutterBtn = doc.getElementById('speechOutterBtn');
+let textIn = doc.getElementById('textIn');
+
+const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+recognition.onstart = function() {
+	console.log('micro on')
+}
+
+recognition.onresult = function(event) {
+	const current = event.resultIndex;
+	const transcript = event.results[current][0].transcript;
+	textIn.value = transcript;
+}
+
+speechRecordBtn.addEventListener('click', () => recognition.start())
+
+
+function readOutLoud(message) {
+	const speech = new SpeechSynthesisUtterance();
+	speech.text = message;
+	speech.volume = 1;
+	speech.rate = 1;
+	speech.pitch = 1;
+
+	window.speechSynthesis.speak(speech);
+}
+
+speechOutterBtn.addEventListener('click', () => {
+	readOutLoud(translateOuter.value)
+})
+
+
+
+
+
+// delete text
+
 btn_del.onclick = del;
 
 function del() {
@@ -100,6 +146,7 @@ function delLang() {
 	let urLang = doc.getElementById('urLang');
 	urLang.value = '';
 }
+
 
 
 ///////////////
@@ -175,3 +222,23 @@ $(document).ready(function() {
 
 
 // testing 
+// let testResult = doc.getElementById('testResult');
+// let testingBg = doc.getElementById('testingBg');
+// let testBtn = doc.getElementById('testBtn');
+// testBtn.onclick = successResult;
+
+// function successResult() {
+// 	let testWord = doc.getElementById('testWord').value;
+	
+// 	if (testWord == 'песересевосодчисик' || testWord == 'песересевосодчисик ' || testWord == 'Песересевосодчисик' || testWord == 'Песересевосодчисик ') {
+// 		testingBg.style.background = '#00e587';
+// 		testResult.innerHTML = 'Правильно!';
+// 	}
+
+// 	else {
+// 		testBtn.style.background = '#ff5441';
+// 		testingBg.style.background = '#ff5441';
+// 		testResult.innerHTML = 'Попробуй еще раз';
+// 	}
+
+// }

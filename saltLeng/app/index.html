@@ -8,7 +8,6 @@
 
 	<!-- task cssFiles (bootstrap css) -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
 	<link rel="stylesheet" type="text/css" href="css/lity.min.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
@@ -234,41 +233,6 @@
 			</div>
 			<!-- end -->
 
-
-			<!-- start -->
-			<div class="row d-flex">
-				<div class="col-lg-12">
-					<div class="cntnt__heading">
-						<h1>Теперь <span class="pMark">попробуйте</span> вы</h1>
-					</div>
-				</div>
-			</div>
-			<!-- end -->
-
-			<!-- start -->
-			<div class="row rowMargin d-flex justify-content-center">
-				<div class="col-12 col-lg-8">
-					
-					<div class="testing">
-						
-						<div class="testing__text" id="testResult">
-							<h3>Переведите слово: <span class="mRed"> "переводчик"</span></h3>
-						</div>
-
-						<div class="testing__input">
-							<input type="text" id="testWord">
-							<button id="testBtn">Go</button>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-			<!-- end -->
-
-
-
-
 		</div>
 
 	</div>
@@ -300,9 +264,11 @@
 		<div class="container">
 			<div class="row d-flex justify-content-center align-items-center">
 
+				<!-- translate inner -->
 				<div class="col-lg-5">
 					<div class="salt__textWrapper">
 						<textarea placeholder="Писать здесь" class="textareaDark" id="textIn"></textarea>
+						<button id="speechRecordBtn"><i class="fa fa-microphone"></i></button>
 					</div>
 				</div>
 
@@ -311,9 +277,11 @@
 
 						<div class="col-lg-12">
 							<div class="salt__btnWrapper">
+
 								<audio id="scary" src="audio/scream.mp3"></audio>
 								<audio id="yau" src="audio/yau.mp3"></audio>
 								<audio id="fight" src="audio/fight.mp3"></audio>
+
 								<button id="btn">
 									<img src="https://image.flaticon.com/icons/svg/1357/1357284.svg" alt="salt it">
 								</button>
@@ -338,11 +306,12 @@
 					</div>
 				</div>
 
+				<!-- translate outter -->
 				<div class="col-lg-5">
 					<div class="salt__textWrapper">
 						<textarea id="translateOuter" placeholder="Перевод появится здесь"
 							class="textareaDark cb-target-1 textareaClass"></textarea>
-						<!-- <p class="copyText" data-clipboard-target=".cb-target-1">testtesttest</p> -->
+							<button id="speechOutterBtn"><i class="fa fa-volume-up"></i></button>
 					</div>
 				</div>
 
