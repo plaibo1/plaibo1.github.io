@@ -3,3 +3,7 @@ saltLeng/node_modules/
 
 portfolio/package-lock.json
 portfolio/node_modules/
+
+ApponyTemplate/bower_components
+ApponyTemplate/.bowerrs
+ApponyTemplate/node_modules
