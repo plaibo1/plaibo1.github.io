@@ -1,0 +1,127 @@
+
+
+/*header start*/
+.cubeHeader {
+	padding: 150px 0;
+	background: url('../cubeHeaderImg/cubeHeaderBg.svg');
+	background: url('../cubeHeaderImg/waveHeaderBg.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.header__welcomeContent {
+	margin: 25px 0;
+}
+
+.header__welcomeContent > h1 {
+	padding: 0;
+	margin: 0;
+	color: #212529;
+}
+
+.header__welcomeContent > p {
+	margin: 0;
+	padding-top: 20px;
+	color: var(--grey);
+}
+
+.headerSlider__slide {
+	width: 100%;
+}
+
+.headerSlider__slide > img {
+	width: 100%;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+}
+/*header end*/
+
+
+/*cubeUnderHeader start*/
+
+.cubeUnderHeader__card {
+	width: 100%;
+	padding: 25px 15px;
+	margin: 20px 0;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	position: relative;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	display: block;
+}
+
+.cubeUnderHeader__card:hover {
+	-webkit-transform: translateY(-10px);
+	-ms-transform: translateY(-10px);
+	-o-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cubeUnderHeader__card:before {
+	content: '';
+	position: absolute;
+	margin: -25px -15px;
+	width: 100%;
+	height: 100%;
+	background-image: -webkit-linear-gradient(bottom left, #4d26f4 0%, #a212d8 100%);
+	background-image: -o-linear-gradient(bottom left, #4d26f4 0%, #a212d8 100%);
+	background-image: linear-gradient(to top right, #4d26f4 0%, #a212d8 100%);
+	z-index: 1;
+	opacity: 0;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.cubeUnderHeader__card:hover:before {
+	opacity: 1;
+}
+
+.cubeCard__icon > img {
+	display: block;
+	width: 80px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	z-index: 3;
+	position: relative;
+}
+
+.cubeCard__textContent {
+	position: relative;
+	text-align: center;
+	z-index: 3;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.cubeCard__textContent > h3 {
+	margin-bottom: 3px;
+}
+
+.cubeUnderHeader__card:hover .cubeCard__textContent > h3 {
+	color: #ffffff;
+}
+
+.cubeCard__textContent > p {
+	color: var(--grey);
+}
+
+.cubeUnderHeader__card:hover .cubeCard__textContent > p {
+	color: var(--greyLight);
+}
+
+/*cubeUnderHeader end*/
+
