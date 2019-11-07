@@ -1,0 +1,106 @@
+.header
+	width: 100%
+	min-height: 100vh
+	height: 100vh
+	background: url('../img/headerBook.svg')
+	background-size: cover
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&__wlcmText
+		margin-bottom: 27px
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		h1
+			display: inline-flex
+			background: $greyBlue
+			color: $dark
+			font-size: 60px
+			padding: 10px
+			border-radius: 5px
+			@include baseShadow(0.2	)
+		h3
+			display: inline-flex
+			background: $greyBlue
+			color: $dark
+			padding: 10px
+			border-radius: 5px
+			@include baseShadow(0.2)
+		h5
+			padding: 10px
+			border-radius: 5px
+			background: $greyBlue
+			color: $baseColor
+			display: inline-flex
+	
+	&__card
+		&:before
+			content: ""
+			position: absolute
+			width: 27px
+			height: 27px
+			right: 5px
+			top: 5px
+			background: url('../img/icons/frankenstein.svg')
+			background-size: cover
+
+	&__card.love
+		&:before
+			background: url('../img/icons/like.svg')
+
+	&__card.comedy
+		&:before
+			background: url('../img/icons/smile.svg')
+
+
+	&__card
+		position: relative
+		margin: 1rem 0
+		padding: 20px 0
+		background: #ffffff
+		width: 100%
+		border-radius: 10px
+		text-align: center
+		cursor: pointer
+		transition: all 0.3s ease
+		@include baseShadow(0.15)
+
+		&:hover
+			transform: translateY(-3px)
+			background: $baseColor
+			@include baseShadow(0.3)
+
+		&:hover &__icon i
+			color: #ffffff
+
+		&:hover &__name h5
+			color: #ffffff
+			
+
+		&__icon
+			margin-bottom: 22px
+			i
+				font-size: 3rem
+				color: $baseColor
+				transition: all 0.3s ease
+
+		&__name
+			min-height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			h5
+				margin: 0
+				color: $baseColor
+				transition: all 0.3s ease
+				font-size: 19px
+
+@media (max-width: 425px)
+	.header
+		&__card
+			&__name
+				h5
+					font-size: 16px

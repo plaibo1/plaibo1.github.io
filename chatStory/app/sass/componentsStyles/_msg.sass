@@ -1,0 +1,38 @@
+#wrapper
+	width: 900px
+	margin: 0 auto
+
+.leftMsg
+	margin-right: auto
+	border-bottom-left-radius: 3px !important
+	
+
+.rightMsg
+	margin-left: auto
+	border-bottom-right-radius: 3px !important
+
+.person
+	opacity: 0
+	cursor: default
+	&__card
+		position: relative
+		width: 250px
+		min-height: 30px
+		background: $greyBlue
+		padding: 10px
+		border-radius: 20px
+		margin-top: 20px
+		margin-bottom: 20px
+		&__name
+			h5
+				color: $baseColor
+		&__img
+			width: 100%
+			position: relative
+			img
+				width: 100%
+				border-radius: 10px
+
+@media (max-width: 900px)
+	#wrapper
+		width: 90%
