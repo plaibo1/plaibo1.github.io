@@ -91,7 +91,6 @@ function createMsgElem() {
 		newMsg__card.classList.add('rightMsg');
 		name.innerHTML = msgData[i].name;
 		msg.innerHTML = msgData[i].message;
-		console.log(msgData[i].name)
 	}
 
 	else {
@@ -119,25 +118,15 @@ function createMsg() {
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op += op * 0.1;
     }, 0.01);
-}
-
-
-	if (wrapper.clientHeight > pageHeight) {
-		
-		personBlock[i].id = ('lastMsg');
-		personBlock[i-1].removeAttribute('id');
-
-		let lastElem = 'lastMsg';
-
-		function gotoBottom (id) {
-			let element = document.getElementById(id);
-			let targerPos = element.getBoundingClientRect().top;
-			window.scrollTo(0, targerPos);
-		}
-
-		gotoBottom(lastElem);
-
 	}
+
+	let toBottom = Math.max(
+		document.body.scrollHeight, document.documentElement.scrollHeight,
+		document.body.offsetHeight, document.documentElement.offsetHeight,
+		document.body.clientHeight, document.documentElement.clientHeight
+	)
+
+	window.scrollTo(0, toBottom);
 	
 	i++;
 
