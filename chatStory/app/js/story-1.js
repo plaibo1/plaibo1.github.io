@@ -12,6 +12,13 @@ let story1 = [
 	{ name: person_3, message: 'Привет я вас ебал это я', img: 'img/icons/frankenstein.svg'},
 	
 	{ name: person_3, message: 'я ебанутый'},
+	{ name: person_3, message: 'я ебанутый'},
+	{ name: person_3, message: 'я ебанутый'},
+	{ name: person_3, message: 'я ебанутый'},
+	{ name: person_3, message: 'я ебанутый'},
+	{ name: person_3, message: 'я ебанутый'},
+	{ name: person_3, message: 'я ебанутый'},
+	{ name: person_3, message: 'я ебанутый'},
 	{ name: person_1, message: 'выйди из чата!'},
 	{ name: person_2, message: 'Мерек, успакойся пожалуйста'},
 	
