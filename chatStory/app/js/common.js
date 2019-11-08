@@ -9,6 +9,20 @@ let story_2 = document.getElementById('story2');
 let story_3 = document.getElementById('story3');
 
 
+window.onload = function() {
+
+
+	// preloader
+	setTimeout(function() {
+		let p = document.getElementById('preloader');
+		if (!p.classList.contains('preloaderDone')) {
+			p.classList.add('preloaderDone')
+		}
+	}, 1000)
+
+}
+
+
 story_1.addEventListener('click', function() {
 	$('.header').fadeOut();
 	msgData = story1;
@@ -25,7 +39,13 @@ story_3.addEventListener('click', function() {
 });
 
 
-window.onclick = addMsg;
+if(window.matchMedia('(max-width: 475px)').matches) {
+	document.addEventListener('touchstart',() => addMsg());
+}
+else {
+	window.onclick = addMsg;
+}
+
 
 function addMsg(){
 
@@ -36,15 +56,17 @@ function addMsg(){
 	if( i < msgData.length && displayOfHeader == 'none') {
 		hideFinger();
 		sentMsgSound();
-		createMsg(); // блочим отрисовку сообщений, когда массив закончился
+		createMsg(); 
 	}
-	else if (i >= msgData.length) alert('end of story')
+	else if (i >= msgData.length) alert('end of story') // блочим отрисовку сообщений, когда массив закончился
 
 }
 
 
 function createMsgElem() {
+	
 	let wrapper = document.getElementById('wrapper');
+	wrapper.style.minHeight = '100vh';
 
 	let newMsg = document.createElement('div');
 	newMsg.classList.add('person');
@@ -120,14 +142,9 @@ function createMsg() {
     }, 0.01);
 	}
 
-	let toBottom = Math.max(
-		document.body.scrollHeight, document.documentElement.scrollHeight,
-		document.body.offsetHeight, document.documentElement.offsetHeight,
-		document.body.clientHeight, document.documentElement.clientHeight
-	)
+	const toBottom = () => scrollTo(0,document.body.scrollHeight)
+	toBottom();
 
-	window.scrollTo(0, toBottom);
-	
 	i++;
 
 }
@@ -146,7 +163,7 @@ function sentMsgSound() {
 
 
 
-function modes(mode, color, scaryImg, music) {
+function modes(mode, color, image, music) {
 
 	let sound = new Audio;
 	sound.src = `audio/${music}`;
@@ -160,7 +177,7 @@ function modes(mode, color, scaryImg, music) {
 			if ( mode[i].classList.contains('active') ) {
 
 				document.body.style.background = color;
-				scaryImg.style.left = -45 + 'px';
+				image[i].style.left = -45 + 'px';
 				sound.play();
 				sound.currentTime = 3;
 
@@ -172,7 +189,7 @@ function modes(mode, color, scaryImg, music) {
 
 			mode[i].classList.remove('active');
 			document.body.style.background = 'white';
-			scaryImg.style.left = '-200px';
+			image[i].style.left = '-200px';
 			sound.pause();
 			sound.currentTime = 0;
 
@@ -183,7 +200,7 @@ function modes(mode, color, scaryImg, music) {
 }
 
 const scary = document.querySelectorAll('.scary');
-const scaryImg = document.getElementById('scaryImg');
+const scaryImg = document.querySelectorAll('.scaryImg');
 const scaryColor = '#181818';
 const scaryMusic = 'scaryTheme.mp3';
 
@@ -191,7 +208,7 @@ modes(scary, scaryColor, scaryImg, scaryMusic); //scary mode init
 
 
 const love = document.querySelectorAll('.love');
-const loveImg = document.getElementById('loveImg');
+const loveImg = document.querySelectorAll('.loveImg');
 const loveColor = '#ff6ca2';
 const loveMusic = 'loveTheme.mp3';
 
@@ -199,7 +216,7 @@ modes(love, loveColor, loveImg, loveMusic); // love mode init
 
 
 const comedy = document.querySelectorAll('.comedy');
-const comedyImg = document.getElementById('comedyImg');
+const comedyImg = document.querySelectorAll('.comedyImg');
 const comedyColor = 'orange';
 const comedyMusic = 'comedyTheme.mp3';
 
