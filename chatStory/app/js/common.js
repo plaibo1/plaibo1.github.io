@@ -40,7 +40,7 @@ story_3.addEventListener('click', function() {
 
 
 if(window.matchMedia('(max-width: 475px)').matches) {
-	document.addEventListener('touchstart',() => addMsg());
+	document.addEventListener('touchend',() => addMsg());
 }
 else {
 	window.onclick = addMsg;
