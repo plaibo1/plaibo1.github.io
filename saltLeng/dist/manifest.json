@@ -1,7 +1,7 @@
 {
 	"name": "Salt Language",
 	"short_name": "SaltLang",
-	"start_url": "/index.html",
+	"start_url": "/saltLeng/dist/index.html",
 	"display": "standalone",
 	"background_color": "#7874F7",
 	"theme_color": "#7874F7",
