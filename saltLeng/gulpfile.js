@@ -121,10 +121,13 @@ gulp.task('build', function() {
 	var buildHtml = gulp.src('app/*.html')
 	.pipe(gulp.dest('dist'));
 
+	var buildManifest = gulp.src('app/manifest.json')
+	.pipe(gulp.dest('dist'));
+
 	var buildAudio = gulp.src('app/audio/**/*')
 	.pipe(gulp.dest('dist/audio'))
 
-	return buildCss, buildFonts, buildJs, buildHtml, buildAudio;
+	return buildCss, buildFonts, buildJs, buildHtml,buildManifest, buildAudio;
 
 });
 

@@ -127,6 +127,23 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  .header__volume {
+    width: 35px;
+    height: 35px;
+    background: #6c63ff;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer; }
+    .header__volume i {
+      color: #ffffff;
+      margin: auto; }
   .header__wlcmText {
     margin-bottom: 27px;
     text-align: center;
@@ -279,6 +296,12 @@ a {
             border-radius: 20px;
     margin-top: 20px;
     margin-bottom: 20px; }
+    .person__card.discription {
+      background: transparent; }
+      .person__card.discription .person__card__msg p {
+        color: #a1a1a1; }
+      .person__card.discription .person__card__name {
+        display: none; }
     .person__card__name h5 {
       color: #6c63ff; }
     .person__card__img {
@@ -361,9 +384,9 @@ a {
   position: absolute;
   overflow: hidden; }
   .faces img {
-    width: 150px;
+    width: 200px;
     position: absolute;
-    left: -200px;
+    left: -250px;
     top: 100px;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;

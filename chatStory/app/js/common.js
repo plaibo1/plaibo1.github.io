@@ -18,7 +18,7 @@ window.onload = function() {
 		if (!p.classList.contains('preloaderDone')) {
 			p.classList.add('preloaderDone')
 		}
-	}, 1000)
+	}, 1000);
 
 }
 
@@ -40,7 +40,7 @@ story_3.addEventListener('click', function() {
 
 
 if(window.matchMedia('(max-width: 475px)').matches) {
-	document.addEventListener('touchstart',() => addMsg());
+	document.addEventListener('touchend',() => addMsg());
 }
 else {
 	window.onclick = addMsg;
@@ -100,8 +100,8 @@ function createMsgElem() {
 
 		newMsgCardImg.append(img);
 		newMsg__card.append(newMsgCardImg)
-		
-	}
+
+	} 
 
 	let name = newMsg__card__name__h5; // name inner
 	let msg = newMsg__card__msg__p; // message inner
@@ -118,7 +118,15 @@ function createMsgElem() {
 	else {
 		newMsg__card.classList.add('leftMsg');
 		name.innerHTML = msgData[i].name;
-		msg.innerHTML = msgData[i].message;
+
+		if (msgData[i].discription) {
+			newMsg__card.classList.add('discription');
+			msg.innerHTML = msgData[i].discription;
+		}
+		else {
+			msg.innerHTML = msgData[i].message;
+		}
+		
 	}
 }
 
@@ -153,21 +161,44 @@ function hideFinger() {
 	$('#finger').fadeOut();
 }
 
+
+// /////////////-------------??????????????????????????????????
+
+let volumeIcon = document.querySelectorAll('.header__volume')[0];
+
+volumeIcon.addEventListener('click', () => {
+
+	if (!(volumeIcon.classList.contains('soundOff'))) {
+		volumeIcon.classList.add('soundOff');
+	}
+	else {
+		volumeIcon.classList.remove('soundOff');
+	}
+
+});
+
+
 function sentMsgSound() {
 	let msgSound = new Audio;
 	msgSound.src = 'audio/SentMessage.mp3';
-	msgSound.play()
+	msgSound.play();
+
+	if (volumeIcon.classList.contains('soundOff')) {
+		msgSound.volume = 0;
+	}
+	else {
+		msgSound.volume = 1;
+	}
+
 }
-
-
-
+// /////////////-------------??????????????????????????????????
 
 
 function modes(mode, color, image, music) {
 
 	let sound = new Audio;
 	sound.src = `audio/${music}`;
-
+	// /////////////-------------??????????????????????????????????
 	for(let i=0; i < mode.length; i++) {
 
 		mode[i].addEventListener('mouseenter', function() {			
@@ -177,10 +208,9 @@ function modes(mode, color, image, music) {
 			if ( mode[i].classList.contains('active') ) {
 
 				document.body.style.background = color;
-				image[i].style.left = -45 + 'px';
+				image[i].style.left = -60 + 'px';
 				sound.play();
 				sound.currentTime = 3;
-
 			}
 
 		});
@@ -189,7 +219,7 @@ function modes(mode, color, image, music) {
 
 			mode[i].classList.remove('active');
 			document.body.style.background = 'white';
-			image[i].style.left = '-200px';
+			image[i].style.left = '-300px';
 			sound.pause();
 			sound.currentTime = 0;
 

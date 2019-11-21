@@ -4,41 +4,18 @@ let person_3 = 'Jopnik';
 let person_4 = 'Testname';
 
 let story1 = [
+
+	{discription: '10 november 22:34, он медлено вышел из-за угла и увидел это!!!!'},
+
 	{name: person_2, message: 'Hello who are u?'},
 	{name: person_1, message: 'Hello im mark jacobs, do u remember me?', img: 'img/misha.jpg'},
 	
 	{ name: person_2, message: 'Hi, sure'},
 	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
-	{ name: person_1, message: 'How are you?', img: 'img/misha.jpg'},
+
 	{ name: person_3, message: 'Привет я вас ебал это я', img: 'img/icons/frankenstein.svg'},
-	
 	{ name: person_3, message: 'я ебанутый'},
-	{ name: person_3, message: 'я ебанутый'},
-	{ name: person_3, message: 'я ебанутый'},
-	{ name: person_3, message: 'я ебанутый'},
-	{ name: person_3, message: 'я ебанутый'},
-	{ name: person_3, message: 'я ебанутый'},
-	{ name: person_3, message: 'я ебанутый'},
-	{ name: person_3, message: 'я ебанутый'},
+
 	{ name: person_1, message: 'выйди из чата!'},
 	{ name: person_2, message: 'Мерек, успакойся пожалуйста'},
 	
