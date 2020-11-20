@@ -26,13 +26,13 @@ const successCallback = pos => {
 	let lat = pos.coords.latitude;
 	let lon = pos.coords.longitude;
 
-	fetchRequest = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`;
+	fetchRequest = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`;
 	updateData(fetchRequest);
 
 }
 
 const errorCallback = err => {
-	fetchRequest = `http://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${api_key}`;
+	fetchRequest = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${api_key}`;
 	updateData(fetchRequest);
 }
 
@@ -42,11 +42,11 @@ navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
 
 // ===================== get data ================== //
-const updateData = (request = `http://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${api_key}`) => {
+const updateData = (request = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${api_key}`) => {
 	fetch(request)
 	.then( function (resp) {return resp.json()} )
 	.then(function (data){
-		console.log(data);
+		//console.log(data);
 	
 		city.innerHTML = `${data.name}, <span>${data.sys.country}</span>`;
 		tempeture.innerHTML = Math.round(data.main.temp) - 273 + '&deg;';
